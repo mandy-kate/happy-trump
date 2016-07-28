@@ -12,7 +12,8 @@ var client = new Twitter({
 
 var results = []
 
-client.get('search/tweets', {q: '@realDonaldTrump', count: 1}, function(error, tweets, response){
+
+client.get('search/tweets.json?', {q: '@realDonaldTrump', count: 4}, function(error, tweets, response){
   if (!error) {
     extractTwitterData (tweets)
 
@@ -21,7 +22,7 @@ client.get('search/tweets', {q: '@realDonaldTrump', count: 1}, function(error, t
       twitterData.statuses.map(function(tweet){
         results.push(tweet.text)
       });
-      console.log(results[0]);
+      return results
     //console.log('this is the text in tweets.statuses ', tweets['statuses']);
     }
   }
