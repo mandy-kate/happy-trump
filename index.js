@@ -63,5 +63,5 @@ console.log(positive[0]);
 
 module.exports = {
   results: results,
-  positive: positive
+  positive: positive[0]
 }
