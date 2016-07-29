@@ -12,8 +12,9 @@ var client = new Twitter({
 
 var results = []
 
-
-client.get('search/tweets.json?', {q: '@realDonaldTrump', count: 1}, function(error, tweets, response){
+// var params = {user_name: 'realDonaldTrump', count: 1}
+// {q: '@realDonaldTrump', count: 1}
+client.get('search/tweets.json?', {q: 'from:realDonaldTrump', count: 1}, function(error, tweets, response){
   if (!error) {
     extractTwitterData (tweets)
 
