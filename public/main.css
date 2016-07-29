@@ -3,23 +3,41 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   margin: 250px;
-  font-family: 'Indie Flower', cursive;
+  font-family: 'Cabin Sketch', cursive;
   text-align: center;
   flex-direction: column;
-}
+  }
 
 h1 {
  color: black;
- font-size: 50px;
- display: flex;
+ font-size: 70px;
  text-align: center;
+ margin: 0;
+ padding: 0;
+ }
+
+ h4 {
+  color: black;
+  font-size: 50px;
+  text-align: center;
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 50px;
  }
 
 p {
   color: #336699;
-  font-size: 30px;
+  font-size: 40px;
   text-align: center;
+
   }
+
+.content {
+  display: inline-flex;
+  flex-direction: row;
+  padding: 20px;
+  margin-right: 50px;
+}
 
 .tweet {
   color: red;
@@ -28,5 +46,13 @@ p {
   color: blue;
 }
 .intro {
-  font-size: 20px;
+  font-size: 30px;
+}
+
+img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin-right: 50px;
+  padding: 50px;
 }
