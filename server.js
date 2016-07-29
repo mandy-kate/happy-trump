@@ -24,6 +24,9 @@ server.engine('hbs', hbs())
 server.set('view engine', 'hbs')
 server.set('views', path.join(__dirname, './views'))
 
+//doing the css
+server.use(express.static('public'))
+
 // routes
 server.get('/quotes', function (req, res) {
   res.render('index', data)

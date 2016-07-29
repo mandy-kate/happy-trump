@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 250px;
+  font-family: 'Indie Flower', cursive;
+  text-align: center;
+  flex-direction: column;
+}
+
+h1 {
+ color: black;
+ font-size: 50px;
+ display: flex;
+ text-align: center;
+ }
+
+p {
+  color: #336699;
+  font-size: 30px;
+  text-align: center;
+  }
+
+.tweet {
+  color: red;
+}
+.affirm {
+  color: blue;
+}
+.intro {
+  font-size: 20px;
+}
