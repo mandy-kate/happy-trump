@@ -1,17 +1,18 @@
 var express = require('express')
 var path = require('path')
 var hbs = require('express-handlebars')
+var data = require('./index.js');
 var server = express()
 //var data = require('..happy-trump/datastore/db.json') //Placeholder
-var data = {
-  "people": [
-    { "name": "Emily", "age": 56 },
-    { "name": "Tama", "age": 31 },
-    { "name": "Sarah", "age": 22 },
-    { "name": "Jill", "age": 77 },
-    { "name": "Fred", "age": 25 }
-  ]
-}
+// var data = {
+//   "people": [
+//     { "name": "Emily", "age": 56 },
+//     { "name": "Tama", "age": 31 },
+//     { "name": "Sarah", "age": 22 },
+//     { "name": "Jill", "age": 77 },
+//     { "name": "Fred", "age": 25 }
+//   ]
+// }
 
 var PORT = process.env.PORT || 3000
 
@@ -21,10 +22,10 @@ server.listen(PORT, function () {
 
 server.engine('hbs', hbs())
 server.set('view engine', 'hbs')
-server.set('views', path.join(__dirname, '../happy-trump/views'))
+server.set('views', path.join(__dirname, './views'))
 
 // routes
-server.get('/', function (req, res) {
+server.get('/quotes', function (req, res) {
   res.render('index', data)
 })
 
