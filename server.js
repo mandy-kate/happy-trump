@@ -26,7 +26,9 @@ server.set('views', path.join(__dirname, './views'))
 
 // routes
 server.get('/quotes', function (req, res) {
-  res.render('index', data)
+  data.getDonaldTweets(5, function(tweets){
+    res.render('index', {results: tweets, positive: data.positive})
+  })
 })
 
 //test page for server checks
