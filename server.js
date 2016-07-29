@@ -2,7 +2,7 @@ var express = require('express')
 var path = require('path')
 var hbs = require('express-handlebars')
 var server = express()
-// var data = require('../datastore/db.json') //Placeholder
+//var data = require('..happy-trump/datastore/db.json') //Placeholder
 var data = {
   "people": [
     { "name": "Emily", "age": 56 },
