@@ -1,7 +1,7 @@
 var express = require('express')
 var path = require('path')
-var server = express()
 var hbs = require('express-handlebars')
+var server = express()
 // var data = require('../datastore/db.json') //Placeholder
 var data = {
   "people": [
