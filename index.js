@@ -35,16 +35,17 @@ var positive = [
   "We are all family and the planet is our home."
 ]
 
-// function generateQuote(){
-//   var random = getRandom(positive.length);
-//   console.log(positive[random]);
-// }
-//
-// function getRandom(length) {
-//   return Math.floor(Math.random() * (length -1 - 0 + 1)) + 0;
-// }
-//
-// var random = getRandom(positive.length);
+
+var quotes = function generateQuote(){
+  var random = getRandom(positive.length);
+  return positive[random];
+}
+
+function getRandom(length) {
+  return Math.floor(Math.random() * (length -1 - 0 + 1)) + 0;
+}
+
+var random = getRandom(positive.length);
 //
 // function generateTrump(){
 //   var random = getRandom(results.length);
@@ -56,12 +57,9 @@ var positive = [
 // }
 //
 // var random = getRandom(results.length);
-//
-//
-// var quote = generateQuote();
-console.log(positive[0]);
+
 
 module.exports = {
   results: results,
-  positive: positive[0]
+  positive: quotes
 }
